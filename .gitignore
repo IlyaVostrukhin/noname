@@ -1,0 +1,9 @@
+.idea/
+*.iml
+target
+.env
+
+src/main/webapp/media
+src/main/webapp/WEB-INF/classes
+*.min.*
+*.jar
