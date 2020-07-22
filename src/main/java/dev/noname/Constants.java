@@ -2,6 +2,8 @@ package dev.noname;
 
 public final class Constants {
 
+    public static final String ACCOUNT_ACTIONS_HISTORY = "ACCOUNT_ACTIONS_HISTORY";
+
     public static final String CURRENT_SHOPPING_CART = "CURRENT_SHOPPING_CART";
 
     // Макс количество продуктов одного наименования
