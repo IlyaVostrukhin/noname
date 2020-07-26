@@ -2,27 +2,24 @@ package dev.noname.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
 
-@WebFilter("/*")
-public class TrimResponseFilter implements Filter {
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-    }
+@WebFilter(filterName = "TrimResponseFilter")
+public class TrimResponseFilter extends AbstractFilter{
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        TrimResponse trimResponse = new TrimResponse((HttpServletResponse) response);
+    public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        TrimResponse trimResponse = new TrimResponse(response);
         chain.doFilter(request, trimResponse);
         trimResponse.complete();
-    }
-
-    @Override
-    public void destroy() {
     }
 
     private static class TrimResponse extends HttpServletResponseWrapper {
