@@ -2,6 +2,7 @@ package dev.noname.filter;
 
 
 import dev.noname.model.ShoppingCart;
+import dev.noname.model.ShoppingCartItem;
 import dev.noname.util.SessionUtils;
 
 import java.io.IOException;
@@ -11,19 +12,13 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebFilter("/*")
-public class AutoRestoreShoppingCartFilter implements Filter {
+@WebFilter(filterName = "AutoRestoreShoppingCartFilter")
+public class AutoRestoreShoppingCartFilter extends AbstractFilter {
     private static final String SHOPPING_CART_DESERIALIZATION_DONE = "SHOPPING_CART_DESERIALIZATION_DONE";
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-    }
-
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse responce, FilterChain chain)
+    public void doFilter(HttpServletRequest req, HttpServletResponse resp, FilterChain chain)
             throws IOException, ServletException {
-        HttpServletRequest req = (HttpServletRequest) request;
-        HttpServletResponse resp = (HttpServletResponse) responce;
         if (req.getSession().getAttribute(SHOPPING_CART_DESERIALIZATION_DONE) == null) {
             if (!SessionUtils.isCurrentShoppingCartCreated(req)) {
                 Cookie cookie = SessionUtils.findShoppingCartCookie(req);
@@ -35,11 +30,6 @@ public class AutoRestoreShoppingCartFilter implements Filter {
             req.getSession().setAttribute(SHOPPING_CART_DESERIALIZATION_DONE, Boolean.TRUE);
         }
         chain.doFilter(req, resp);
-    }
-
-    @Override
-    public void destroy() {
-
     }
 
     protected ShoppingCart shoppingCartFromString(String cookieValue) {
@@ -56,5 +46,17 @@ public class AutoRestoreShoppingCartFilter implements Filter {
             }
         }
         return shoppingCart;
+    }
+
+    protected String shoppingCartToString(ShoppingCart shoppingCart) {
+        StringBuilder result = new StringBuilder();
+        for (ShoppingCartItem shoppingCartItem : shoppingCart.getItems()) {
+            result.append(shoppingCartItem.getIdProduct())
+                    .append("-").append(shoppingCartItem.getCount()).append("|");
+        }
+        if (result.length() > 0) {
+            result.deleteCharAt(result.length() - 1);
+        }
+        return result.toString();
     }
 }

@@ -37,9 +37,15 @@
             <version>1.2</version>
             <!--scope>provided</scope -->
         </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
     </dependencies>
     <build>
-        <directory>src/main/webapp/WEB-INF</directory>
+        <!--        <directory>src/main/webapp/WEB-INF</directory>-->
         <finalName>noname</finalName>
         <pluginManagement>
             <plugins>
