@@ -9,6 +9,11 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
     <name>noname Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
@@ -45,7 +50,7 @@
         </dependency>
     </dependencies>
     <build>
-        <!--        <directory>src/main/webapp/WEB-INF</directory>-->
+<!--        <directory>src/main/webapp/WEB-INF/classes</directory>-->
         <finalName>noname</finalName>
         <pluginManagement>
             <plugins>
@@ -56,9 +61,55 @@
                     <configuration>
                         <source>1.8</source>
                         <target>1.8</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                    <configuration>
+                        <encoding>${project.build.sourceEncoding}</encoding>
                     </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <!-- clean -->
+                    <execution>
+                        <id>clean-lib</id>
+                        <phase>clean</phase>
+                        <configuration>
+                            <tasks>
+                                <delete dir="${basedir}/src/main/webapp/WEB-INF/lib" />
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <!-- build -->
+                    <execution>
+                        <id>copy-lib</id>
+                        <phase>install</phase>
+                        <configuration>
+                            <tasks>
+                                <delete dir="${basedir}/src/main/webapp/WEB-INF/lib" />
+                                <copy todir="${basedir}/src/main/webapp/WEB-INF/lib">
+                                    <fileset dir="${basedir}/target/${project.build.finalName}/WEB-INF/lib" />
+                                </copy>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>

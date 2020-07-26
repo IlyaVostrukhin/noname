@@ -1,289 +1,289 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 
 <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product278009" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/736d61727470686f6e65.jpg" alt="Prestigio SH398187">
+                    <img src="/media/men_pants.jpg" alt="PrestigioMen">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor diagonal 6.0" / Camera: 3.2Mp / RAM: 4 Gb / Orange / 1100 mA/h / Weight 720 g / WiFi / Bluetooth / Dictophone / USB</p>
+                            <p><span class="title">Описание</span>Материал: хлопок 100%. Производитель: Китай. Размеры: 40-55.</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Prestigio SH398187</h4>
-                <div class="code">Code: 278009</div>
-                <div class="price">$ 570.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="278009">Buy</a>
+                <h4 class="name">Набор трусов Prestigio</h4>
+                <div class="code">Код: 278009</div>
+                <div class="price">&#8381 570.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="278009">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Smartphone</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Prestigio</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Трусы мужские</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Prestigio</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product278014" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/652d626f6f6b.jpg" alt="EvroMedia NU6353951">
+                    <img src="/media/mens_pants_and_socks.jpg" alt="Мужской набор EvroMedia">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor diagonal 9" / Matrix type: E lnk Pearl / Resolution: 1600x1200 / Memory 6 GB / Weight 190 g</p>
+                            <p><span class="title">Описание</span>Шикарный набор для успешного мужчины. Качественные материалы. Все размеры.</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">EvroMedia NU6353951</h4>
-                <div class="code">Code: 278014</div>
-                <div class="price">$ 2710.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="278014">Buy</a>
+                <h4 class="name">Мужской набор EvroMedia</h4>
+                <div class="code">Код: 278014</div>
+                <div class="price">&#8381 1530.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="278014">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">E-book</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">EvroMedia</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Наборы для мужчин</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">EvroMedia</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product278018" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/736d61727470686f6e65.jpg" alt="Huawei BIC2404">
+                    <img src="/media/mens_pants_and_socks1.jpg" alt="Funny">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor diagonal 4.4" / Camera: 3.2Mp / RAM: 1 Gb / Blue / 1000 mA/h / Weight 320 g / 2 Sim cards / WiFi / USB / FM receiver / Dictophone / 3G</p>
+                            <p><span class="title">Описание</span>Яркий и красочный набор для стильных мужчин. Качественные материалы. Все размеры.</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Huawei BIC2404</h4>
-                <div class="code">Code: 278018</div>
-                <div class="price">$ 370.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="278018">Buy</a>
+                <h4 class="name">Набор мужской Funny</h4>
+                <div class="code">Код: 278018</div>
+                <div class="price">&#8381 990.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="278018">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Smartphone</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Huawei</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Наборы для мужчин</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Funny</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product278026" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/7461626c6574.jpg" alt="Apple QR35378150">
+                    <img src="/media/wtf.jpg" alt="WTF">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor 9" / RAM 3 GB / HDD 370 GB / Black / Weight 60 g / Bluetooth / 3G / USB / GPS</p>
+                            <p><span class="title">Описание</span>У меня просто слов нет</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Apple QR35378150</h4>
-                <div class="code">Code: 278026</div>
-                <div class="price">$ 2630.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="278026">Buy</a>
+                <h4 class="name">WTF</h4>
+                <div class="code">Код: 278026</div>
+                <div class="price">&#8381 2630.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="278026">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Tablet</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Apple</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Ужас</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">WTF</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product278031" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/7461626c6574.jpg" alt="Acer JEQ0979832">
+                    <img src="/media/mens_pants_and_socks2.jpg" alt="Pepper">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor 7" / RAM 4 GB / HDD 320 GB / Silver / Weight 260 g / HDMI / GPS / Bluetooth</p>
+                            <p><span class="title">Описание</span>Комплект для мужчин с "остринкой"</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Acer JEQ0979832</h4>
-                <div class="code">Code: 278031</div>
-                <div class="price">$ 1670.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="278031">Buy</a>
+                <h4 class="name">Набор мужской Pepper</h4>
+                <div class="code">Код: 278031</div>
+                <div class="price">&#8381 1670.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="278031">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Tablet</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Acer</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Наборы для мужчин</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Pepper</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product278039" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/736d61727470686f6e65.jpg" alt="Samsung JL9994">
+                    <img src="/media/mens_socks.jpg" alt="Socks">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor diagonal 4.4" / Camera: 3.2Mp / RAM: 1 Gb / Black / 1700 mA/h / Weight 800 g / Bluetooth / 3G / FM receiver</p>
+                            <p><span class="title">Описание</span>Носки мужские. Отличное качество. Вся линейка размеров.</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Samsung JL9994</h4>
-                <div class="code">Code: 278039</div>
-                <div class="price">$ 1130.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="278039">Buy</a>
+                <h4 class="name">Носки мужские</h4>
+                <div class="code">Код: 278039</div>
+                <div class="price">&#8381 150.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="278039">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Smartphone</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Samsung</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Носки мужские</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Socks</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product378009" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/736d61727470686f6e65.jpg" alt="Prestigio SH398187">
+                    <img src="/media/pants.jpg" alt="PrestigioWoman">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor diagonal 6.0" / Camera: 3.2Mp / RAM: 4 Gb / Orange / 1100 mA/h / Weight 720 g / WiFi / Bluetooth / Dictophone / USB</p>
+                            <p><span class="title">Описание</span>Женские трусики на каждый день. Отличные материалы. Яркие цвета.</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Prestigio SH398187</h4>
-                <div class="code">Code: 278009</div>
-                <div class="price">$ 570.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="378009">Buy</a>
+                <h4 class="name">Трусы женские Prestigio</h4>
+                <div class="code">Код: 278009</div>
+                <div class="price">&#8381 300.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="378009">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Smartphone</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Prestigio</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Женское белье</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Prestigio</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product378014" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/652d626f6f6b.jpg" alt="EvroMedia NU6353951">
+                    <img src="/media/socks.jpg" alt="Socks1">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor diagonal 9" / Matrix type: E lnk Pearl / Resolution: 1600x1200 / Memory 6 GB / Weight 190 g</p>
+                            <p><span class="title">Описание</span>Носки мужские. Отличное качество. Вся линейка размеров.</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">EvroMedia NU6353951</h4>
-                <div class="code">Code: 278014</div>
-                <div class="price">$ 2710.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="378014">Buy</a>
+                <h4 class="name">Носки мужские</h4>
+                <div class="code">Код: 278014</div>
+                <div class="price">&#8381 110.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="378014">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">E-book</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">EvroMedia</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Носки мужские</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Socks</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product378018" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/736d61727470686f6e65.jpg" alt="Huawei BIC2404">
+                    <img src="/media/stockings.jpg" alt="Sexy">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor diagonal 4.4" / Camera: 3.2Mp / RAM: 1 Gb / Blue / 1000 mA/h / Weight 320 g / 2 Sim cards / WiFi / USB / FM receiver / Dictophone / 3G</p>
+                            <p><span class="title">Описание</span>Сексуальные чулки с бантиками. Покорите своего мужчину</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Huawei BIC2404</h4>
-                <div class="code">Code: 278018</div>
-                <div class="price">$ 370.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="378018">Buy</a>
+                <h4 class="name">Чулки Sexy</h4>
+                <div class="code">Код: 278018</div>
+                <div class="price">&#8381 670.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="378018">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Smartphone</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Huawei</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Женское белье</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Sexy</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product378026" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/7461626c6574.jpg" alt="Apple QR35378150">
+                    <img src="/media/best_socks.jpg" alt="Bich">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor 9" / RAM 3 GB / HDD 370 GB / Black / Weight 60 g / Bluetooth / 3G / USB / GPS</p>
+                            <p><span class="title">Описание</span>Шикарный дизайн от лучших модельеров помойки!</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Apple QR35378150</h4>
-                <div class="code">Code: 278026</div>
-                <div class="price">$ 2630.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="378026">Buy</a>
+                <h4 class="name">Мужские носки BomzhStyle</h4>
+                <div class="code">Код: 278026</div>
+                <div class="price">&#8381 2630.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="378026">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Tablet</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Apple</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Мужские носки</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">BomzhStyle</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product378031" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/7461626c6574.jpg" alt="Acer JEQ0979832">
+                    <img src="/media/woman_socks.jpg" alt="WomanSocks">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor 7" / RAM 4 GB / HDD 320 GB / Silver / Weight 260 g / HDMI / GPS / Bluetooth</p>
+                            <p><span class="title">Описание</span>Женские гетры. Отличное качество. Есть разные цвета и размеры.</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Acer JEQ0979832</h4>
-                <div class="code">Code: 278031</div>
-                <div class="price">$ 1670.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="378031">Buy</a>
+                <h4 class="name">Женские гетры </h4>
+                <div class="code">Код: 278031</div>
+                <div class="price">&#8381 1670.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="378031">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Tablet</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Acer</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Носки женские</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Socks</span></span>
                 </div>
             </div>
         </div>
         <!-- /PRODUCT DATA -->
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <!-- PRODUCT DATA -->
         <div id="product378039" class="panel panel-default product">
             <div class="panel-body">
                 <div class="thumbnail">
-                    <img src="/media/736d61727470686f6e65.jpg" alt="Samsung JL9994">
+                    <img src="/media/socks1.jpg" alt="Socks2">
                     <div class="desc">
                         <div class="cell">
-                            <p><span class="title">Details</span>Monitor diagonal 4.4" / Camera: 3.2Mp / RAM: 1 Gb / Black / 1700 mA/h / Weight 800 g / Bluetooth / 3G / FM receiver</p>
+                            <p><span class="title">Описание</span>Носки мужские на каждый день</p>
                         </div>
                     </div>
                 </div>
-                <h4 class="name">Samsung JL9994</h4>
-                <div class="code">Code: 278039</div>
-                <div class="price">$ 1130.00</div>
-                <a class="btn btn-primary pull-right buy-btn" data-id-product="378039">Buy</a>
+                <h4 class="name">Мужские носки Week</h4>
+                <div class="code">Код: 278039</div>
+                <div class="price">&#8381 240.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="378039">Купить</a>
                 <div class="list-group">
-                    <span class="list-group-item"> <small>Category:</small> <span class="category">Smartphone</span></span>
-                    <span class="list-group-item"> <small>Producer:</small> <span class="producer">Samsung</span></span>
+                    <span class="list-group-item"> <small>Категория:</small> <span class="Категория">Мужские носки</span></span>
+                    <span class="list-group-item"> <small>Производитель:</small> <span class="Производитель">Socks</span></span>
                 </div>
             </div>
         </div>

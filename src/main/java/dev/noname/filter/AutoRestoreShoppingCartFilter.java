@@ -19,6 +19,8 @@ public class AutoRestoreShoppingCartFilter extends AbstractFilter {
     @Override
     public void doFilter(HttpServletRequest req, HttpServletResponse resp, FilterChain chain)
             throws IOException, ServletException {
+        resp.setContentType("text/html;charset=UTF-8");
+        resp.setCharacterEncoding("UTF-8");
         if (req.getSession().getAttribute(SHOPPING_CART_DESERIALIZATION_DONE) == null) {
             if (!SessionUtils.isCurrentShoppingCartCreated(req)) {
                 Cookie cookie = SessionUtils.findShoppingCartCookie(req);

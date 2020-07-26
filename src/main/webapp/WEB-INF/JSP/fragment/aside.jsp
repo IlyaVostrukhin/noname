@@ -6,47 +6,60 @@
 </div>
 <!-- Search form -->
 <form class="search" action="/search">
-    <div id="findProducts" class="panel panel-success collapse">
-        <div class="panel-heading">Find products</div>
+<%--    <div id="findProducts" class="panel panel-primary collapse">--%>
+    <div id="findProducts" class="panel panel-primary">
+        <div class="panel-heading">Найти товар</div>
         <div class="panel-body">
             <div class="input-group">
-                <input type="text" name="query" class="form-control" placeholder="Search query">
+                <input type="text" name="query" class="form-control" placeholder="Поиск...">
                 <span class="input-group-btn">
-                    <a id="goSearch" class="btn btn-default">Go!</a>
+                    <a id="goSearch" class="btn btn-default">Найти!</a>
                   </span>
             </div>
             <div class="more-options">
-                <a data-toggle="collapse" href="#searchOptions">More filters <span class="caret"></span></a>
+                <a data-toggle="collapse" href="#searchOptions" style="color: #595959">Еще фильтры <span class="caret"></span></a>
             </div>
         </div>
         <div id="searchOptions" class="collapse">
-            <div class="panel-heading">Category filters</div>
+            <div class="panel-heading">Фильтр по категории</div>
             <div class="panel-body categories">
-                <label> <input type="checkbox" id="allCategories"> All </label>
+                <label> <input type="checkbox" id="allCategories"> Все </label>
                 <div class="form-group">
                     <div class="checkbox">
-                        <label><input type="checkbox" name="category" value="1" class="search-option">E-book
-                            (78)</label>
+                        <label><input type="checkbox" name="category" value="1" class="search-option">Трусы мужские
+                            (12)</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="checkbox">
-                        <label><input type="checkbox" name="category" value="2" class="search-option">Mp3-player
-                            (75)</label>
+                        <label><input type="checkbox" name="category" value="1" class="search-option">Белье женское
+                            (7)</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="category" value="2" class="search-option">Наборы для мужчин
+                            (5)</label>
                     </div>
                 </div>
             </div>
-            <div class="panel-heading">Producers filters</div>
+            <div class="panel-heading">Фильтр по производителю</div>
             <div class="panel-body producers">
-                <label> <input type="checkbox" id="allProducers"> All </label>
+                <label> <input type="checkbox" id="allProducers"> Все </label>
                 <div class="form-group">
                     <div class="checkbox">
-                        <label><input type="checkbox" name="producer" value="1" class="search-option">Dell (56) </label>
+                        <label><input type="checkbox" name="producer" value="1" class="search-option">Socks (14) </label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="checkbox">
-                        <label><input type="checkbox" name="producer" value="2" class="search-option">Apple (22)
+                        <label><input type="checkbox" name="producer" value="2" class="search-option">Prestigio (7)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="producer" value="2" class="search-option">Funny (2)
                         </label>
                     </div>
                 </div>
@@ -56,16 +69,16 @@
 </form>
 <!-- /Search form -->
 <!-- Categories -->
-<div id="productCatalog" class="panel panel-success collapse">
-    <div class="panel-heading">Product catalog</div>
+<%--<div id="productCatalog" class="panel panel-success collapse">--%>
+<div id="productCatalog" class="panel panel-primary">
+    <div class="panel-heading">Категории товаров</div>
     <div class="list-group">
-        <a href="/products" class="list-group-item"> <span class="badge">78</span> E-book</a>
-        <a href="/products" class="list-group-item"> <span class="badge">75</span> Mp3-player</a>
-        <a href="/products" class="list-group-item"> <span class="badge">110</span> Notebook</a>
-        <a href="/products" class="list-group-item"> <span class="badge">113</span> Phone</a>
-        <a href="/products" class="list-group-item"> <span class="badge">216</span> Smartphone</a>
-        <a href="/products" class="list-group-item"> <span class="badge">95</span> Smartwatch</a>
-        <a href="/products" class="list-group-item"> <span class="badge">211</span> Tablet</a>
+        <a href="/products" class="list-group-item"> <span class="badge">78</span> Трусы мужские</a>
+        <a href="/products" class="list-group-item"> <span class="badge">75</span> Наборы для мужчин</a>
+        <a href="/products" class="list-group-item"> <span class="badge">110</span> Носки мужские</a>
+        <a href="/products" class="list-group-item"> <span class="badge">113</span> Женское белье</a>
+        <a href="/products" class="list-group-item"> <span class="badge">216</span> Носки женские</a>
+        <a href="/products" class="list-group-item"> <span class="badge">95</span> Ужас</a>
     </div>
 </div>
 <!-- /Categories -->

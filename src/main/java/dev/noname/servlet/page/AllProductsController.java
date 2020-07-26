@@ -1,4 +1,4 @@
-package dev.noname.servlet;
+package dev.noname.servlet.page;
 
 import dev.noname.util.RoutingUtils;
 
@@ -7,7 +7,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet("/products")
 public class AllProductsController extends AbstractController {
@@ -18,6 +17,8 @@ public class AllProductsController extends AbstractController {
             throws ServletException, IOException {
 //        List<?> products = getProductService().getProducts();
 //        req.setAttribute("products", products);
+        resp.setContentType("text/html;charset=UTF-8");
+        resp.setCharacterEncoding("UTF-8");
         RoutingUtils.forwardToPage("products.jsp", req, resp);
     }
 }

@@ -4,17 +4,17 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NoName</title>
-<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/app.css">--%>
-<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap.css">--%>
-<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap-theme.css">--%>
-<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.css">--%>
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-    <link href="/static/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="/static/css/font-awesome.css" rel="stylesheet">
-    <link href="/static/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/app.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.css">
+<%--    <link href="/static/css/bootstrap.css" rel="stylesheet">--%>
+<%--    <link href="/static/css/bootstrap-theme.css" rel="stylesheet">--%>
+<%--    <link href="/static/css/font-awesome.css" rel="stylesheet">--%>
+<%--    <link href="/static/css/app.css" rel="stylesheet">--%>
 </head>
 <body>
 <header>

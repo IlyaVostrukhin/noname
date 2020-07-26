@@ -15,6 +15,8 @@ public class TrimResponseFilter extends AbstractFilter{
     @Override
     public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws IOException, ServletException {
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         TrimResponse trimResponse = new TrimResponse(response);
         chain.doFilter(request, trimResponse);
         trimResponse.complete();

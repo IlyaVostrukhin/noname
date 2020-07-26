@@ -14,7 +14,10 @@ public class ErrorHandlerFilter extends AbstractFilter {
     @Override
     public void doFilter(HttpServletRequest request, HttpServletResponse response,
                          FilterChain chain) throws IOException, ServletException {
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         try {
+            String s = response.getCharacterEncoding();
             chain.doFilter(request, response);
         } catch (Throwable th) {
             String requestUrl = request.getRequestURI();
