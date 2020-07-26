@@ -16,8 +16,8 @@ public class AllProductsController extends AbstractController {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        List<?> products = getBusinessService().getProducts();
-        req.setAttribute("products", products);
+//        List<?> products = getProductService().getProducts();
+//        req.setAttribute("products", products);
         RoutingUtils.forwardToPage("products.jsp", req, resp);
     }
 }

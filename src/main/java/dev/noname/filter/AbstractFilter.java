@@ -1,6 +1,7 @@
 package dev.noname.filter;
 
 import ch.qos.logback.classic.Logger;
+import dev.noname.util.UrlUtils;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.*;
@@ -20,7 +21,12 @@ public abstract class AbstractFilter implements Filter {
             throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
-        doFilter(req, resp, chain);
+        String url = req.getRequestURI();
+        if (UrlUtils.isMediaUrl(url) || UrlUtils.isStaticUrl(url)) {
+            chain.doFilter(request, response);
+        } else {
+            doFilter(req, resp, chain);
+        }
     }
 
     public abstract void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)

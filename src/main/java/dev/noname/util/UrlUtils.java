@@ -4,23 +4,21 @@ public class UrlUtils {
     private UrlUtils() {
     }
 
-    private static boolean isAjaxUrl(String url) {
-        return url.startsWith("/ajax/");
-    }
+    public static boolean isAjaxUrl(String url) { return url.startsWith("/ajax/"); }
 
-    private static boolean isAjaxJsonUrl(String url) {
+    public static boolean isAjaxJsonUrl(String url) {
         return url.startsWith("/ajax/json/");
     }
 
-    private static boolean isAjaxHtmlUrl(String url) {
+    public static boolean isAjaxHtmlUrl(String url) {
         return url.startsWith("/ajax/html/");
     }
 
-    private static boolean isStaticUrl(String url) {
+    public static boolean isStaticUrl(String url) {
         return url.startsWith("/static/");
     }
 
-    private static boolean isMediaUrl(String url) {
+    public static boolean isMediaUrl(String url) {
         return url.startsWith("/media/");
     }
 }
