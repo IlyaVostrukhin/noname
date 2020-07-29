@@ -48,6 +48,12 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.9</version>
+        </dependency>
     </dependencies>
     <build>
 <!--        <directory>src/main/webapp/WEB-INF/classes</directory>-->

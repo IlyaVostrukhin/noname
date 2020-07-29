@@ -75,7 +75,7 @@
     <div class="list-group">
         <a href="/products" class="list-group-item"> <span class="badge">78</span> Трусы мужские</a>
         <a href="/products" class="list-group-item"> <span class="badge">75</span> Наборы для мужчин</a>
-        <a href="/products" class="list-group-item"> <span class="badge">110</span> Носки мужские</a>
+        <a href="/products/Socks" class="list-group-item"> <span class="badge">110</span> Носки мужские</a>
         <a href="/products" class="list-group-item"> <span class="badge">113</span> Женское белье</a>
         <a href="/products" class="list-group-item"> <span class="badge">216</span> Носки женские</a>
         <a href="/products" class="list-group-item"> <span class="badge">95</span> Ужас</a>

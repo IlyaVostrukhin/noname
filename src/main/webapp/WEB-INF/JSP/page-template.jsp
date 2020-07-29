@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap-theme.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.css">
-<%--    <link href="/static/css/bootstrap.css" rel="stylesheet">--%>
-<%--    <link href="/static/css/bootstrap-theme.css" rel="stylesheet">--%>
-<%--    <link href="/static/css/font-awesome.css" rel="stylesheet">--%>
-<%--    <link href="/static/css/app.css" rel="stylesheet">--%>
 </head>
 <body>
 <header>
@@ -33,11 +29,8 @@
 <footer class="footer">
     <jsp:include page="fragment/footer.jsp"/>
 </footer>
-<script src="/static/js/jquery.js"></script>
-<script src="/static/js/bootstrap.js"></script>
-<script src="/static/js/app.js"></script>
-<%--<script src="${pageContext.request.contextPath}/static/js/app.js"></script>--%>
-<%--<script src="${pageContext.request.contextPath}/static/js/jquery.js"></script>--%>
-<%--<script src="${pageContext.request.contextPath}/static/js/bootstrap.js"></script>--%>
+<script src="${pageContext.request.contextPath}/static/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/app.js"></script>
 </body>
 </html>
