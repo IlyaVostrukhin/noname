@@ -1,24 +1,44 @@
 package dev.noname.service.impl;
 
-import dev.noname.service.BusinessService;
+import ch.qos.logback.classic.Logger;
 import dev.noname.service.OrderService;
 import dev.noname.service.ProductService;
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.Properties;
 
 public class ServiceManager {
 
+    private static final Logger LOGGER = (Logger) LoggerFactory.getLogger(ServiceManager.class);
+
     private final Properties applicationProperties = new Properties();
+    private final BasicDataSource dataSource;
     private final ProductService productService;
     private final OrderService orderService;
 
     private ServiceManager(ServletContext context) {
         loadApplicationProperties();
-        productService = new ProductServiceImpl();
+        dataSource = createDataSource();
+        productService = new ProductServiceImpl(dataSource);
         orderService = new OrderServiceImpl();
+    }
+
+    private BasicDataSource createDataSource() {
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setDefaultAutoCommit(false);
+        dataSource.setRollbackOnReturn(true);
+        dataSource.setDriverClassName(getApplicationProperty("db.driver"));
+        dataSource.setUrl(getApplicationProperty("db.url"));
+        dataSource.setUsername(getApplicationProperty("db.username"));
+        dataSource.setPassword(getApplicationProperty("db.password"));
+        dataSource.setInitialSize(Integer.parseInt(getApplicationProperty("db.pool.initSize")));
+        dataSource.setMaxTotal(Integer.parseInt(getApplicationProperty("db.pool.maxSize")));
+        return dataSource;
     }
 
     public ProductService getProductService() {
@@ -39,6 +59,11 @@ public class ServiceManager {
     }
 
     public void close() {
+        try {
+            dataSource.close();
+        } catch (SQLException exc) {
+            LOGGER.error("Close datasource failed: " + exc.getMessage(), exc);
+        }
     }
 
     public String getApplicationProperty(String key) {

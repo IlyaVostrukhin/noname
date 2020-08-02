@@ -17,7 +17,6 @@ public class ErrorHandlerFilter extends AbstractFilter {
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         try {
-            String s = response.getCharacterEncoding();
             chain.doFilter(request, response);
         } catch (Throwable th) {
             String requestUrl = request.getRequestURI();
