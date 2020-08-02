@@ -1,0 +1,32 @@
+package dev.noname.jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public final class JDBCUtils {
+
+    private JDBCUtils() {
+    }
+
+    public static <T> T select(Connection connection,
+                               String sql,
+                               ResultSetHandler<T> resultSetHandler,
+                               Object... parameters) throws SQLException {
+        try (PreparedStatement ps = connection.prepareStatement(sql)) {
+            populatePreparedStatement(ps, parameters);
+            ResultSet rs = ps.executeQuery();
+            return resultSetHandler.handle(rs);
+        }
+    }
+
+    private static void populatePreparedStatement(PreparedStatement ps, Object... parameters)
+            throws SQLException {
+        if (parameters != null) {
+            for (int i = 0; i < parameters.length; i++) {
+                ps.setObject(i + 1, parameters[i]);
+            }
+        }
+    }
+}

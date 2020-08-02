@@ -12,6 +12,9 @@ public final class Constants {
     // Макс количество продуктов (позиций) в корзине
     public static final int MAX_PRODUCTS_PER_SHOPPING_CART = 20;
 
+    //Макс количество продуктов на странице
+    public static final int MAX_PRODUCTS_PER_HTML_PAGE = 12;
+
     public enum Cookie {
         SHOPPING_CART("iSCC", 60 * 60 * 24 * 365);
 

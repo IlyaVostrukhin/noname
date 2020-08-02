@@ -7,3 +7,7 @@ src/main/webapp/media
 src/main/webapp/WEB-INF/classes
 *.min.*
 *.jar
+/external/
+/src/dev/
+/external/test-data/
+/src/dev/noname/testenv/

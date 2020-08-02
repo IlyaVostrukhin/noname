@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class RoutingUtils {
+public final class RoutingUtils {
     public static void forwardToFragment(String jspFragment,
                                          HttpServletRequest req,
                                          HttpServletResponse resp)
