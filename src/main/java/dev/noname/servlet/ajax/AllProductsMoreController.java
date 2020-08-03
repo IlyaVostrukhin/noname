@@ -2,7 +2,7 @@ package dev.noname.servlet.ajax;
 
 import dev.noname.Constants;
 import dev.noname.entity.Product;
-import dev.noname.servlet.page.AbstractController;
+import dev.noname.servlet.AbstractController;
 import dev.noname.util.RoutingUtils;
 
 import javax.servlet.ServletException;
@@ -20,8 +20,8 @@ public class AllProductsMoreController extends AbstractController {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
         resp.setCharacterEncoding("UTF-8");
-        List<Product> products =
-                getProductService().listAllProducts(2, Constants.MAX_PRODUCTS_PER_HTML_PAGE);
+        List<Product> products = getProductService()
+                .listAllProducts(getPage(req), Constants.MAX_PRODUCTS_PER_HTML_PAGE);
         req.setAttribute("products", products);
         RoutingUtils.forwardToFragment("product-list.jsp", req, resp);
     }

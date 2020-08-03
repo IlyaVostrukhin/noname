@@ -13,7 +13,8 @@
         <div class="panel-heading">Найти товар</div>
         <div class="panel-body">
             <div class="input-group">
-                <input type="text" name="query" class="form-control" placeholder="Поиск...">
+                <input type="text" name="query" class="form-control" placeholder="Поиск..."
+                       value="${searchForm.query }">
                 <span class="input-group-btn">
                     <a id="goSearch" class="btn btn-default">Найти!</a>
                   </span>
@@ -23,9 +24,9 @@
                         class="caret"></span></a>
             </div>
         </div>
-        <div id="searchOptions" class="collapse">
-            <noname:category-filter categories="${category_list }"/>
-            <noname:producer-filter producers="${producer_list }"/>
+        <div id="searchOptions" class="collapse ${!searchForm.categoriesEmpty or !searchForm.producersEmpty ? 'in' : ''}">
+            <noname:category-filter categories="${category_list }" searchForm="${searchForm }"/>
+            <noname:producer-filter producers="${producer_list }" searchForm="${searchForm }"/>
         </div>
     </div>
 </form>

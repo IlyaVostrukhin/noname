@@ -2,6 +2,7 @@ package dev.noname.servlet.page;
 
 import dev.noname.Constants;
 import dev.noname.entity.Product;
+import dev.noname.servlet.AbstractController;
 import dev.noname.util.RoutingUtils;
 
 import javax.servlet.ServletException;
@@ -22,7 +23,9 @@ public class ProductsByCategoryController extends AbstractController {
         resp.setCharacterEncoding("UTF-8");
         String categoryUrl = req.getRequestURI().substring(SUBSTRING_INDEX);
         List<Product> products = getProductService().listProductsByCategory(categoryUrl, 1, Constants.MAX_PRODUCTS_PER_HTML_PAGE);
+        int totalCount = getProductService().countProductsByCategory(categoryUrl);
         req.setAttribute("products", products);
+        req.setAttribute("pageCount", getPageCount(totalCount, Constants.MAX_PRODUCTS_PER_HTML_PAGE));
         req.setAttribute("selectedCategoryUrl", categoryUrl);
         RoutingUtils.forwardToPage("products.jsp", req, resp);
     }
