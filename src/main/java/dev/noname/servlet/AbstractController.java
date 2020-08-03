@@ -1,6 +1,7 @@
-package dev.noname.servlet.page;
+package dev.noname.servlet;
 
 import ch.qos.logback.classic.Logger;
+import dev.noname.form.SearchForm;
 import dev.noname.service.BusinessService;
 import dev.noname.service.OrderService;
 import dev.noname.service.ProductService;
@@ -9,6 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 
 public abstract class AbstractController extends HttpServlet {
     private static final long serialVersionUID = 5205240208995791465L;
@@ -29,5 +31,29 @@ public abstract class AbstractController extends HttpServlet {
 
     public final OrderService getOrderService() {
         return orderService;
+    }
+
+    public final int getPageCount(int totalCount, int itemsPerPage) {
+        int result = totalCount / itemsPerPage;
+        if (result * itemsPerPage != totalCount) {
+            result++;
+        }
+        return result;
+    }
+
+    public final int getPage(HttpServletRequest request) {
+        try {
+            return Integer.parseInt(request.getParameter("page"));
+        } catch (NumberFormatException e) {
+            return 1;
+        }
+    }
+
+    public final SearchForm createSearchForm(HttpServletRequest request) {
+        return new SearchForm(
+                request.getParameter("query"),
+                request.getParameterValues("category"),
+                request.getParameterValues("producer")
+        );
     }
 }

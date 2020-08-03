@@ -78,4 +78,17 @@ public class ResultSetHandlerFactory {
             }
         };
     }
+
+    public final static ResultSetHandler<Integer> getCountResultSetHandler() {
+        return new ResultSetHandler<Integer>() {
+            @Override
+            public Integer handle(ResultSet rs) throws SQLException {
+                if (rs.next()) {
+                    return rs.getInt(1);
+                } else {
+                    return 0;
+                }
+            }
+        };
+    }
 }
