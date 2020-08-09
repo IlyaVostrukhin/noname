@@ -1,20 +1,22 @@
 package dev.noname.model;
 
+import dev.noname.entity.Product;
+
 import java.io.Serializable;
 
 public class ShoppingCartItem implements Serializable {
 
     private static final long serialVersionUID = -3586435151613948016L;
-    private int idProduct;
+    private Product product;
     private int count;
 
     public ShoppingCartItem(){
         super();
     }
 
-    public ShoppingCartItem(int idProduct, int count) {
+    public ShoppingCartItem(Product product, int count) {
         super();
-        this.idProduct = idProduct;
+        this.product = product;
         this.count = count;
     }
 
@@ -22,12 +24,12 @@ public class ShoppingCartItem implements Serializable {
         return serialVersionUID;
     }
 
-    public int getIdProduct() {
-        return idProduct;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setIdProduct(int idProduct) {
-        this.idProduct = idProduct;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public int getCount() {
@@ -41,7 +43,7 @@ public class ShoppingCartItem implements Serializable {
     @Override
     public String toString() {
         return "ShoppingCartItem [" +
-                "idProduct=" + idProduct +
+                "product=" + product +
                 ", count=" + count +
                 ']';
     }

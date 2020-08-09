@@ -10,8 +10,7 @@
     <c:forEach var="category" items="${categories }">
         <div class="form-group">
             <div class="checkbox">
-                <label><input type="checkbox" name="category" value="${category.id }"
-                    ${searchForm.categories.contains(category.id) ? 'checked' : ''}
+                <label><input type="checkbox" name="category" value="${category.id }" ${searchForm.categories.contains(category.id) ? 'checked' : ''}
                               class="search-option">${category.name } (${category.productCount })</label>
             </div>
         </div>
