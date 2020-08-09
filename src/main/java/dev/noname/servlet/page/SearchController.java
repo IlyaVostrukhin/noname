@@ -22,15 +22,12 @@ public class SearchController extends AbstractController {
         resp.setContentType("text/html;charset=UTF-8");
         resp.setCharacterEncoding("UTF-8");
         SearchForm searchForm = createSearchForm(req);
-        List<Product> products =
-                getProductService().listProductsBySearchForm(searchForm, 1, Constants.MAX_PRODUCTS_PER_HTML_PAGE);
-        int totalCount = getProductService().countProductsBySearchForm(searchForm);
-
-        req.setAttribute("pageCount", getPageCount(totalCount, Constants.MAX_PRODUCTS_PER_HTML_PAGE));
+        List<Product> products = getProductService().listProductsBySearchForm(searchForm, 1, Constants.MAX_PRODUCTS_PER_HTML_PAGE);
         req.setAttribute("products", products);
+        int totalCount = getProductService().countProductsBySearchForm(searchForm);
+        req.setAttribute("pageCount", getPageCount(totalCount, Constants.MAX_PRODUCTS_PER_HTML_PAGE));
         req.setAttribute("productCount", totalCount);
         req.setAttribute("searchForm", searchForm);
-
         RoutingUtils.forwardToPage("search-result.jsp", req, resp);
     }
 }

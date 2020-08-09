@@ -11,20 +11,21 @@
                     <div class="desc">
                         <div class="cell">
                             <p>
-                                <span class="title">Описание</span>${p.description }
+                                <span class="title">Описание</span>
+                                <span class="description">${p.description }</span>
                             </p>
                         </div>
                     </div>
                 </div>
                 <h4 class="name">${p.name }</h4>
                 <div class="code">Код: ${p.id }</div>
-                <div class="price">&#8381 ${p.price }</div>
+                <div class="price">₽ ${p.price }</div>
                 <a class="btn btn-primary pull-right buy-btn" data-id-product="${p.id }">Купить</a>
                 <div class="list-group">
                     <span class="list-group-item"> <small>Категория:</small> <span
-                            class="Категория">${p.category }</span></span>
+                            class="category">${p.category }</span></span>
                     <span class="list-group-item"> <small>Производитель:</small> <span
-                            class="Производитель">${p.producer }</span></span>
+                            class="producer">${p.producer }</span></span>
                 </div>
             </div>
         </div>

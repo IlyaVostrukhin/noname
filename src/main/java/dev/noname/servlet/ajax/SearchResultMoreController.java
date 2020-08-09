@@ -23,9 +23,8 @@ public class SearchResultMoreController extends AbstractController {
         resp.setCharacterEncoding("UTF-8");
 
         SearchForm searchForm = createSearchForm(req);
-        List<Product> products =
-                getProductService().listProductsBySearchForm(searchForm, getPage(req), Constants.MAX_PRODUCTS_PER_HTML_PAGE);
-
+        List<Product> products = getProductService()
+                .listProductsBySearchForm(searchForm, getPage(req), Constants.MAX_PRODUCTS_PER_HTML_PAGE);
         req.setAttribute("products", products);
         RoutingUtils.forwardToFragment("product-list.jsp", req, resp);
     }

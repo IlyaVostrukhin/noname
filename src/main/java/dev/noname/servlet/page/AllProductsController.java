@@ -21,11 +21,11 @@ public class AllProductsController extends AbstractController {
             throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
         resp.setCharacterEncoding("UTF-8");
-        List<Product> products =
-                getProductService().listAllProducts(1, Constants.MAX_PRODUCTS_PER_HTML_PAGE);
+        List<Product> products = getProductService()
+                .listAllProducts(1, Constants.MAX_PRODUCTS_PER_HTML_PAGE);
+        req.setAttribute("products", products);
         int totalCount = getProductService().countAllProducts();
         req.setAttribute("pageCount", getPageCount(totalCount, Constants.MAX_PRODUCTS_PER_HTML_PAGE));
-        req.setAttribute("products", products);
         RoutingUtils.forwardToPage("products.jsp", req, resp);
     }
 }

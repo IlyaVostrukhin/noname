@@ -1,5 +1,7 @@
 package dev.noname.util;
 
+import org.json.JSONObject;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +29,15 @@ public final class RoutingUtils {
             throws IOException {
         resp.setContentType("text/html");
         resp.getWriter().println(text);
+        resp.getWriter().close();
+    }
+
+    public static void sendJSON(JSONObject jsonObject,
+                                HttpServletRequest req,
+                                HttpServletResponse resp)
+            throws IOException {
+        resp.setContentType("application/json");
+        resp.getWriter().println(jsonObject.toString());
         resp.getWriter().close();
     }
 

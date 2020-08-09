@@ -1,6 +1,7 @@
 package dev.noname.servlet;
 
 import ch.qos.logback.classic.Logger;
+import dev.noname.form.ProductForm;
 import dev.noname.form.SearchForm;
 import dev.noname.service.BusinessService;
 import dev.noname.service.OrderService;
@@ -54,6 +55,13 @@ public abstract class AbstractController extends HttpServlet {
                 request.getParameter("query"),
                 request.getParameterValues("category"),
                 request.getParameterValues("producer")
+        );
+    }
+
+    public final ProductForm createProductForm(HttpServletRequest request) {
+        return new ProductForm(
+                Integer.parseInt(request.getParameter("idProduct")),
+                Integer.parseInt(request.getParameter("count"))
         );
     }
 }
