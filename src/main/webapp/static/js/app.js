@@ -20,7 +20,6 @@
         $('#addProductPopup .category').text(product.find('.category').text());
         $('#addProductPopup .producer').text(product.find('.producer').text());
         $('#addProductPopup .description').text(product.find('.description').text());
-        alert(product.find('.description').text());
         $('#addProductPopup .count').val(1);
         $('#addProductPopup .cost').text(price);
         $('#addToCart').removeClass('hidden');

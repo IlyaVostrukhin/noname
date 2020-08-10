@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/products" style="color: #595959">
-                <img alt="photo" src="../../../static/img/logo1.png" class="img-responsive visible-lg visible-md" style="height: 160%">
+                <img alt="photo" src="../../../static/img/logo1.png" class="img-responsive visible-lg visible-md" style="height: 330%">
                 <span class="visible-sm visible-xs">NoName</span>
             </a>
 <%--            <a class="navbar-brand" href="/products" style="color: #595959">NoName</a>--%>
@@ -21,7 +21,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Корзина (<span class="total-count">${CURRENT_SHOPPING_CART.totalCount}</span>)<span
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Корзина <br><span class="total-count">Количество: ${CURRENT_SHOPPING_CART.totalCount}</span> шт<br>Сумма: ${CURRENT_SHOPPING_CART.totalCost} ₽<span
                             class="caret"></span>
                     </a>
                     <div class="dropdown-menu shopping-cart-desc">
@@ -31,6 +31,7 @@
                     </div>
                 </li>
             </ul>
+            <br>
             <a href="#" class="btn btn-primary navbar-btn navbar-right sign-in"><!--<i class="fa fa-facebook-official"
                                                                                    aria-hidden="true"></i>--> Войти</a>
         </div>

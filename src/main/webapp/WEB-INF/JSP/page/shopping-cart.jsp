@@ -29,7 +29,7 @@
                         </c:when>
                         <c:otherwise>
                             <a class="btn btn-danger remove-product" data-id-product="${item.product.id}"
-                               data-count="1">Удалить одну единицу товара</a><br><br>
+                               data-count="1">Удалить 1 шт.</a><br><br>
                         </c:otherwise>
                     </c:choose>
                 </td>
