@@ -1,5 +1,6 @@
 package dev.noname.jdbc;
 
+import dev.noname.entity.Account;
 import dev.noname.entity.Category;
 import dev.noname.entity.Producer;
 import dev.noname.entity.Product;
@@ -50,6 +51,18 @@ public class ResultSetHandlerFactory {
                     return producer;
                 }
             };
+
+    public final static ResultSetHandler<Account> ACCOUNT_RESULT_SET_HANDLER =
+            new ResultSetHandler<Account>() {
+        @Override
+        public Account handle(ResultSet rs) throws SQLException {
+            Account a = new Account();
+            a.setId(rs.getInt("id"));
+            a.setEmail(rs.getString("email"));
+            a.setName(rs.getString("name"));
+            return a;
+        }
+    };
 
     public final static <T> ResultSetHandler<T> getSingleResultSetHandler(
             final ResultSetHandler<T> oneRowResultSetHandler) {

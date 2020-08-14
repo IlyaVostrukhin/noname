@@ -22,6 +22,18 @@ public final class JDBCUtils {
         }
     }
 
+    public static <T> T insert(Connection c, String sql, ResultSetHandler<T> resultSetHandler, Object... parameters) throws SQLException {
+        try (PreparedStatement ps = c.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+            populatePreparedStatement(ps, parameters);
+            int result = ps.executeUpdate();
+            if (result != 1) {
+                throw new SQLException("Can't insert row to database. Result=" + result);
+            }
+            ResultSet rs = ps.getGeneratedKeys();
+            return resultSetHandler.handle(rs);
+        }
+    }
+
     public static void populateSqlAndParams(StringBuilder sql, List<Object> params,
                                             List<Integer> list, String expression) {
         if (list != null && !list.isEmpty()) {

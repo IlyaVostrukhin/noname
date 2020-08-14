@@ -1,6 +1,7 @@
 package dev.noname.service.impl;
 
 import ch.qos.logback.classic.Logger;
+import dev.noname.service.AuthService;
 import dev.noname.service.OrderService;
 import dev.noname.service.ProductService;
 import org.apache.commons.dbcp2.BasicDataSource;
@@ -20,12 +21,14 @@ public class ServiceManager {
     private final BasicDataSource dataSource;
     private final ProductService productService;
     private final OrderService orderService;
+    private final AuthService authService;
 
     private ServiceManager(ServletContext context) {
         loadApplicationProperties();
         dataSource = createDataSource();
         productService = new ProductServiceImpl(dataSource);
         orderService = new OrderServiceImpl(dataSource);
+        authService = new AuthServiceImpl(dataSource);
     }
 
     private BasicDataSource createDataSource() {
@@ -45,9 +48,9 @@ public class ServiceManager {
         return productService;
     }
 
-    public OrderService getOrderService() {
-        return orderService;
-    }
+    public OrderService getOrderService() { return orderService; }
+
+    public AuthService getAuthService() { return authService; }
 
     public static ServiceManager getInstance(ServletContext context) {
         ServiceManager instance = (ServiceManager) context.getAttribute("SERVICE_MANAGER");
