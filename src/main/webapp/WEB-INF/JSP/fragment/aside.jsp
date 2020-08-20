@@ -7,7 +7,7 @@
     <a data-toggle="collapse" href="#findProducts" style="color: #0f0f0f">Поиск товара <span class="caret"></span></a>
 </div>
 <!-- Search form -->
-<form class="search" action="/search">
+<form class="search" action="/search" enctype="application/x-www-form-urlencoded">
     <div id="findProducts" class="panel panel-primary collapse">
         <div class="panel-heading">Найти товар</div>
         <div class="panel-body">

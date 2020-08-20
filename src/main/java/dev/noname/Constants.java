@@ -6,6 +6,12 @@ public final class Constants {
 
     public static final String CURRENT_SHOPPING_CART = "CURRENT_SHOPPING_CART";
 
+    public static final String CURRENT_ACCOUNT = "CURRENT_ACCOUNT";
+
+    public static final String SUCCESS_REDIRECT_URL_AFTER_SIGNIN = "SUCCESS_REDIRECT_URL_AFTER_SIGNIN";
+
+    public static final String CURRENT_REQUEST_URL = "CURRENT_REQUEST_URL";
+
     // Макс количество продуктов одного наименования
     public static final int MAX_PRODUCT_COUNT_PER_SHOPPING_CART = 10;
 

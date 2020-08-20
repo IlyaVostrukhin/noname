@@ -23,19 +23,30 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public boolean isExist(String login, String password) {
+        return getAccount(login, password) != null;
+    }
+
+    //TODO:Доработать для работы с телефоном и именем
+    public Account getAccount(String login, String password) {
         try (Connection connection = dataSource.getConnection()) {
-            Account account = JDBCUtils.select(connection, "select * from account where email=?", accountResultSetHandler, login);
-            return account != null;
+            return JDBCUtils.select(connection, "select * from account where email=? and password=?",
+                    accountResultSetHandler, login, password);
         } catch (SQLException e) {
             throw new InternalServerErrorException("Can't execute SQL request: " + e.getMessage(), e);
         }
     }
 
     @Override
-    public void register(String name, String email, String phone, String password) {
+    public Account register(String login, String email, String password, String surName,
+                            String firstName, String lastName, String phone, String city,
+                            Integer postCode, String address) {
         try (Connection connection = dataSource.getConnection()) {
-            JDBCUtils.insert(connection, "insert into account values (nextval('account_seq'),?,?,?,?)",
-                    accountResultSetHandler, name, email, phone, password);
+            Account account = JDBCUtils.insert(connection, "insert into account values " +
+                            "(nextval('account_seq'),?,?,?,?,?,?,?,?,?,?)",
+                    accountResultSetHandler, firstName, email, phone, password, login, surName,
+                    lastName, city, postCode, address);
+            connection.commit();
+            return account;
         } catch (SQLException e) {
             throw new InternalServerErrorException("Can't execute SQL request: " + e.getMessage(), e);
         }

@@ -196,3 +196,10 @@ img.small {
         width: 100% !important;
     }
 }
+
+.custom-control-label:before{
+    background-color:red;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:black;
+}

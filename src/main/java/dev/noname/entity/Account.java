@@ -1,19 +1,21 @@
 package dev.noname.entity;
 
-public class Account extends AbstractEntity<Integer> {
+import dev.noname.model.CurrentAccount;
+
+public class Account extends AbstractEntity<Integer> implements CurrentAccount {
     private static final long serialVersionUID = -1126297213009700684L;
 
-    private String name;
+    private String firstName;
     private String email;
     private String phone;
     private String password;
 
     public String getName() {
-        return name;
+        return firstName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.firstName = name;
     }
 
     public String getEmail() {
@@ -37,8 +39,11 @@ public class Account extends AbstractEntity<Integer> {
     public void setPassword(String password) { this.password = password; }
 
     @Override
+    public String getDescription() { return firstName + "(" + email + ")"; }
+
+    @Override
     public String toString() {
         return String.format("Account [id=%s, name=%s, email=%s, phone=%s]",
-                getId(), name, email, phone);
+                getId(), firstName, email, phone);
     }
 }
