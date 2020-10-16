@@ -1,8 +1,12 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8" contentType="text/html;charset=UTF-8" trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="u" uri="/WEB-INF/tags.tld" %>
 
 <div id="shoppingCart">
-    <div class="alert alert-warning hidden-print" role="alert">Для создания заказа, пожалуйста, авторизуйтесь</div>
+    <c:if test="${CURRENT_ACCOUNT == null}">
+        <div class="alert alert-warning hidden-print" role="alert">Для создания заказа, пожалуйста, авторизуйтесь</div>
+    </c:if>
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -41,9 +45,18 @@
         </tr>
         </tbody>
     </table>
-    <div class="row hidden-print">
-        <div class="col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5">
-            <a class="btn btn-primary btn-block"><i aria-hidden="true"></i> Войти</a>
+    <c:if test="${CURRENT_ACCOUNT == null}">
+        <div class="row hidden-print">
+            <div class="col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5">
+                <form action="/sign-in" method="get">
+                    <c:if test="${fn:startsWith(CURRENT_REQUEST_URL,'/search') or fn:startsWith(CURRENT_REQUEST_URL, '/products') or
+						CURRENT_REQUEST_URL == '/shopping-cart' }">
+                        <u:urlEncode url="${CURRENT_REQUEST_URL }" var="encodedUrl"/>
+                        <input type="hidden" name="target" value="${encodedUrl }">
+                    </c:if>
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </c:if>
 </div>

@@ -3,6 +3,7 @@ package dev.noname.servlet;
 import ch.qos.logback.classic.Logger;
 import dev.noname.form.ProductForm;
 import dev.noname.form.SearchForm;
+import dev.noname.service.AuthService;
 import dev.noname.service.BusinessService;
 import dev.noname.service.OrderService;
 import dev.noname.service.ProductService;
@@ -19,20 +20,22 @@ public abstract class AbstractController extends HttpServlet {
 
     private ProductService productService;
     private OrderService orderService;
+    private AuthService authService;
 
     @Override
     public final void init() throws ServletException {
         productService = ServiceManager.getInstance(getServletContext()).getProductService();
         orderService = ServiceManager.getInstance(getServletContext()).getOrderService();
+        authService = ServiceManager.getInstance(getServletContext()).getAuthService();
     }
 
     public final ProductService getProductService() {
         return productService;
     }
 
-    public final OrderService getOrderService() {
-        return orderService;
-    }
+    public final OrderService getOrderService() { return orderService; }
+
+    public AuthService getAuthService() { return authService; }
 
     public final int getPageCount(int totalCount, int itemsPerPage) {
         int result = totalCount / itemsPerPage;

@@ -1,7 +1,11 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html;charset=UTF-8" trimDirectiveWhitespaces="true" %>
+<%request.setCharacterEncoding("UTF-8");%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
-<html lang="ru">
+<fmt:requestEncoding value="utf-8"/>
+<html>
+<%--<html lang="ru">--%>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -33,5 +37,6 @@
 <script src="${pageContext.request.contextPath}/static/js/jquery.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/bootstrap.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/app.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery.maskedinput.min.js"></script>
 </body>
 </html>

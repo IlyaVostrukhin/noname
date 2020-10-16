@@ -179,6 +179,8 @@
                 count : count
             },
             success : function(data) {
+                $('#currentShoppingCart .total-count').text(data.totalCount);
+                $('#currentShoppingCart .total-cost').text(data.totalCost);
                 if (data.totalCount == 0) {
                     window.location.href = '/products';
                 } else {
@@ -204,4 +206,8 @@
     }
 
     init();
+});
+
+$(document).ready(function() {
+    $("#phone").mask("+7-999-999-99-99");
 });

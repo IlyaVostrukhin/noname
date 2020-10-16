@@ -1,6 +1,7 @@
 package dev.noname.util;
 
 import dev.noname.Constants;
+import dev.noname.model.CurrentAccount;
 import dev.noname.model.ShoppingCart;
 
 import javax.servlet.http.Cookie;
@@ -39,6 +40,18 @@ public class SessionUtils {
     public static void updateCurrentShoppingCartCookie(String cookieValue, HttpServletResponse resp) {
         WebUtils.setCookie(Constants.Cookie.SHOPPING_CART.getName(), cookieValue,
                 Constants.Cookie.SHOPPING_CART.getTtl(), resp);
+    }
+
+    public static CurrentAccount getCurrentAccount(HttpServletRequest request) {
+        return (CurrentAccount) request.getSession().getAttribute(Constants.CURRENT_ACCOUNT);
+    }
+
+    public static void setCurrentAccount(HttpServletRequest request, CurrentAccount currentAccount) {
+        request.getSession().setAttribute(Constants.CURRENT_ACCOUNT, currentAccount);
+    }
+
+    public static boolean isCurrentAccountCreated(HttpServletRequest request) {
+        return getCurrentAccount(request) != null;
     }
 
     private SessionUtils() {
