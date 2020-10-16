@@ -6,12 +6,12 @@
 
 <div class="panel-heading">Фильтр по категории</div>
 <div class="panel-body categories">
-    <label> <input type="checkbox" id="allCategories"> Все </label>
+    <input type="checkbox" class="custom-checkbox" id="allCategories"><label for="allCategories"> Все </label>
     <c:forEach var="category" items="${categories }">
         <div class="form-group">
             <div class="checkbox">
-                <label><input type="checkbox" name="category" value="${category.id }" ${searchForm.categories.contains(category.id) ? 'checked' : ''}
-                              class="search-option">${category.name } (${category.productCount })</label>
+                <input type="checkbox" name="category" id="${category.id}" value="${category.id }" ${searchForm.categories.contains(category.id) ? 'checked' : ''}
+                              class="search-option custom-checkbox"><label for="${category.id}">${category.name } (${category.productCount })</label>
             </div>
         </div>
     </c:forEach>

@@ -41,7 +41,6 @@
                 <span class="badge">${category.productCount}</span> ${category.name }
             </a>
         </c:forEach>
-
     </div>
 </div>
 <!-- /Categories -->

@@ -7,6 +7,9 @@
         initSearchForm();
         $('#goSearch').click(goSearch);
         $('.remove-product').click(removeProductFromCart);
+        $('.post-request').click(function(){
+            postRequest($(this).attr('data-url'));
+        });
     };
 
     var showAddProductPopup = function (){
@@ -30,6 +33,11 @@
     };
     var initBuyBtn = function(){
         $('.buy-btn').click(showAddProductPopup);
+    };
+    var postRequest = function(url){
+        var form = '<form id="postRequestForm" action="'+url+'" method="post"></form>';
+        $('body').append(form);
+        $('#postRequestForm').submit();
     };
     var addProductToCart = function (){
         var idProduct = $('#addProductPopup').attr('data-id-product');

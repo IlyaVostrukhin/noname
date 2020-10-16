@@ -5,6 +5,8 @@
 <%@ taglib prefix="u" uri="/WEB-INF/tags.tld" %>
 
 <div class="form-group">
+    <h4 align="center"><b>Рады приветствовать Вас в нашем магазине!</b></h4>
+    <h5 align="center"><b>Для продолжения авторизуйтесь или зарегистрируйтесь в системе.</b></h5><br/>
     <form method="post">
         <div class="form-group">
             <label for="login">Логин</label>

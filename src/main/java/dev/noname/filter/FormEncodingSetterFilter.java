@@ -21,6 +21,7 @@ public class  FormEncodingSetterFilter implements Filter {
         String contentType = req.getContentType();
         if (contentType != null && contentType.startsWith(FILTERABLE_CONTENT_TYPE)) {
             req.setCharacterEncoding(encoding);
+            resp.setCharacterEncoding(encoding);
             resp.setContentType("text/html;charset=UTF-8");
         }
         chain.doFilter(req, resp);

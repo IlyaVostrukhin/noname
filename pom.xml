@@ -110,9 +110,9 @@
                         <id>clean-lib</id>
                         <phase>clean</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <delete dir="${basedir}/src/main/webapp/WEB-INF/lib" />
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>
@@ -123,12 +123,12 @@
                         <id>copy-lib</id>
                         <phase>install</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <delete dir="${basedir}/src/main/webapp/WEB-INF/lib" />
                                 <copy todir="${basedir}/src/main/webapp/WEB-INF/lib">
                                     <fileset dir="${basedir}/target/${project.build.finalName}/WEB-INF/lib" />
                                 </copy>
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>
