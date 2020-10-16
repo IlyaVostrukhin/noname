@@ -44,7 +44,9 @@
                         <li style="vertical-align: top; text-align: right"><a href="/orders">Добро пожаловать,
                             <br>${CURRENT_ACCOUNT.name}!</a></li>
                         <li style="vertical-align: top;"><a href="/orders">Мои заказы</a></li>
-                        <li style="vertical-align: top;"><a href="/sign-out">Выйти</a></li>
+                        <li style="vertical-align: top;">
+                            <a href="javascript:void(0);" class="post-request" data-url="/sign-out">Выйти</a>
+                        </li>
                     </ul>
                 </c:when>
                 <c:otherwise>

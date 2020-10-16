@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="u" uri="/WEB-INF/tags.tld" %>
+<%@ page session="false" %>
 
 <%--<div class="container">--%>
 <h3 class="col-sm-12"><b>Регистрация</b></h3>
