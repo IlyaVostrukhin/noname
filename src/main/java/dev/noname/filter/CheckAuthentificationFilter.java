@@ -4,6 +4,7 @@ import dev.noname.Constants;
 import dev.noname.util.RoutingUtils;
 import dev.noname.util.SessionUtils;
 import dev.noname.util.UrlUtils;
+import dev.noname.util.WebUtils;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -20,7 +21,7 @@ public class CheckAuthentificationFilter extends AbstractFilter {
         if (SessionUtils.isCurrentAccountCreated(request)) {
             chain.doFilter(request, response);
         } else {
-            String requestUrl = request.getRequestURI();
+            String requestUrl = WebUtils.getCurrentRequestUrl(request);
             if (UrlUtils.isAjaxUrl(requestUrl)) {
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                 response.getWriter().println("401");

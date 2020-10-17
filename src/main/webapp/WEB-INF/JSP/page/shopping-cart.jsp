@@ -45,9 +45,9 @@
         </tr>
         </tbody>
     </table>
-    <c:if test="${CURRENT_ACCOUNT == null}">
         <div class="row hidden-print">
             <div class="col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5">
+                <c:if test="${CURRENT_ACCOUNT == null}">
                 <form action="/sign-in" method="get">
                     <c:if test="${fn:startsWith(CURRENT_REQUEST_URL,'/search') or fn:startsWith(CURRENT_REQUEST_URL, '/products') or
 						CURRENT_REQUEST_URL == '/shopping-cart' }">
@@ -56,7 +56,10 @@
                     </c:if>
                     <button type="submit" class="btn btn-primary">Войти</button>
                 </form>
+                </c:if>
+                <c:if test="${CURRENT_ACCOUNT != null}">
+                    <a href="javascript:void(0);" class="post-request btn btn-primary" data-url="/order">Создать заказ</a>
+                </c:if>
             </div>
         </div>
-    </c:if>
 </div>

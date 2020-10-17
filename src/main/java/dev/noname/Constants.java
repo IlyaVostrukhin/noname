@@ -12,6 +12,8 @@ public final class Constants {
 
     public static final String CURRENT_REQUEST_URL = "CURRENT_REQUEST_URL";
 
+    public static final int ORDERS_PER_PAGE = 5;
+
     // Макс количество продуктов одного наименования
     public static final int MAX_PRODUCT_COUNT_PER_SHOPPING_CART = 10;
 

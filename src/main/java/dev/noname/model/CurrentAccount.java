@@ -2,6 +2,8 @@ package dev.noname.model;
 
 public interface CurrentAccount {
 
+    Integer getId();
+
     String getName();
 
     String getDescription();
