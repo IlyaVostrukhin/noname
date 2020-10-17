@@ -1,9 +1,6 @@
 package dev.noname.jdbc;
 
-import dev.noname.entity.Account;
-import dev.noname.entity.Category;
-import dev.noname.entity.Producer;
-import dev.noname.entity.Product;
+import dev.noname.entity.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -54,15 +51,41 @@ public class ResultSetHandlerFactory {
 
     public final static ResultSetHandler<Account> ACCOUNT_RESULT_SET_HANDLER =
             new ResultSetHandler<Account>() {
-        @Override
-        public Account handle(ResultSet rs) throws SQLException {
-            Account a = new Account();
-            a.setId(rs.getInt("id"));
-            a.setEmail(rs.getString("email"));
-            a.setName(rs.getString("name"));
-            return a;
-        }
-    };
+                @Override
+                public Account handle(ResultSet rs) throws SQLException {
+                    Account a = new Account();
+                    a.setId(rs.getInt("id"));
+                    a.setEmail(rs.getString("email"));
+                    a.setName(rs.getString("name"));
+                    return a;
+                }
+            };
+
+    public final static ResultSetHandler<OrderItem> ORDER_ITEM_RESULT_SET_HANDLER =
+            new ResultSetHandler<OrderItem>() {
+                @Override
+                public OrderItem handle(ResultSet rs) throws SQLException {
+                    OrderItem orderItem = new OrderItem();
+                    orderItem.setId(rs.getLong("id"));
+                    orderItem.setCount(rs.getInt("count"));
+                    orderItem.setIdOrder(rs.getLong("id_order"));
+                    Product product = PRODUCT_RESULT_SET_HANDLER.handle(rs);
+                    orderItem.setProduct(product);
+                    return orderItem;
+                }
+            };
+
+    public final static ResultSetHandler<Order> ORDER_RESULT_SET_HANDLER =
+            new ResultSetHandler<Order>() {
+                @Override
+                public Order handle(ResultSet rs) throws SQLException {
+                    Order order = new Order();
+                    order.setId(rs.getLong("id"));
+                    order.setCreated(rs.getTimestamp("created"));
+                    order.setIdAccount(rs.getInt("id_account"));
+                    return order;
+                }
+            };
 
     public final static <T> ResultSetHandler<T> getSingleResultSetHandler(
             final ResultSetHandler<T> oneRowResultSetHandler) {

@@ -42,7 +42,17 @@
 
     <filter-mapping>
         <filter-name>CheckAuthentificationFilter</filter-name>
+        <url-pattern>/order</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>CheckAuthentificationFilter</filter-name>
         <url-pattern>/orders</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>CheckAuthentificationFilter</filter-name>
+        <url-pattern>/ajax/html/more/orders</url-pattern>
     </filter-mapping>
 
     <filter-mapping>

@@ -211,7 +211,36 @@
                 alert('Error');
             }
         });
-    }
+    };
+
+    var loadMoreMyOrders = function (){
+        var btn = $('#loadMoreMyOrders');
+        convertButtonToLoader(btn, 'btn-success');
+        var pageNumber = parseInt($('#myOrders').attr('data-page-number'));
+        var url = '/ajax/html/more/orders?page=' + (pageNumber + 1);
+        $.ajax({
+            url : url,
+            success : function(html) {
+                $('#myOrders tbody').append(html);
+                pageNumber++;
+                var pageCount = parseInt($('#myOrders').attr('data-page-count'));
+                $('#myOrders').attr('data-page-number', pageNumber);
+                if (pageNumber < pageCount) {
+                    convertLoaderToButton(btn, 'btn-success', loadMoreMyOrders);
+                } else {
+                    btn.remove();
+                }
+            },
+            error : function(xhr) {
+                convertLoaderToButton(btn, 'btn-success', loadMoreMyOrders);
+                if (xhr.status == 401) {
+                    window.location.href = '/sign-in';
+                } else {
+                    alert('Error');
+                }
+            }
+        });
+    };
 
     init();
 });
